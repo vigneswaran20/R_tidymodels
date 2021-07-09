@@ -3,9 +3,28 @@ especially when you use very powerful machine learning techniques. Linear regres
 The tidymodels package rsample has functions that help you specify training and testing sets."
 
 
+'----------------------------------------------------------------------------------------------------------------------------------------'
+
+"Training data and testing data with rsample:-"
+
+library(tidymodels)
+
+car_split <- car_vars %>%
+    initial_split(prop = 0.8,
+                  strata = aspiration)
+
+car_train <- training(car_split)
+car_test <- testing(car_split)
+'---------------------------------------------------------------------------------------------------------------------------------------'
 
 
+"Training data and testing data"
 
+'
+Build your model with your training data
+Choose your model with your validation data, or resampled datasets
+Evaluate your model with your testing data
+'
 
 
 
